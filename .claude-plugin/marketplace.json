@@ -39,7 +39,8 @@
         "./skills/academic-writing",
         "./skills/experiment-tracking",
         "./skills/arxiv-search",
-        "./skills/latex-writing"
+        "./skills/latex-writing",
+        "./skills/huggingface"
       ],
       "mcpServers": {
         "fs": {
@@ -91,6 +92,10 @@
             "--storage-path",
             "${ARXIV_STORAGE_PATH:-./arxiv_papers}"
           ]
+        },
+        "huggingface": {
+          "type": "http",
+          "url": "https://huggingface.co/mcp?login"
         }
       }
     }

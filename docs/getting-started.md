@@ -56,6 +56,9 @@ Check that new commands are listed:
 - `/summarize`
 - `/search-papers`
 - `/track-experiment`
+- `/arxiv`
+- `/latex`
+- `/huggingface`
 
 ## Configuration
 
@@ -83,6 +86,7 @@ The plugin uses four MCP servers:
 3. **SQLite** - Database storage (auto-configured)
 4. **Git** - Version control (auto-configured)
 5. **ArXiv** - Academic paper search and download (requires `uv` installed)
+6. **HuggingFace** - Model and dataset search (OAuth authentication)
 
 To verify MCP servers work:
 
@@ -382,6 +386,17 @@ your-research-project/
    echo $TAVILY_API_KEY
    ```
 4. Restart Claude Code after setting environment variables
+
+### HuggingFace OAuth Authentication
+
+**Problem**: HuggingFace commands not working
+
+**Solution**:
+1. HuggingFace uses OAuth (browser-based login), not API keys
+2. First use will open browser for authentication
+3. Log in to your HuggingFace account
+4. Authorize the application
+5. Return to Claude Code - authentication is saved for future use
 
 ### Python Scripts Not Running
 

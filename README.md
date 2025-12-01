@@ -14,6 +14,7 @@ Custom slash commands for common research tasks:
 - **`/track-experiment`** - Experiment tracking and result management
 - **`/arxiv`** - Search, download, and manage arXiv papers
 - **`/latex`** - Create and format LaTeX documents, equations, tables, and figures
+- **`/huggingface`** - Search HuggingFace Hub for models and datasets
 
 ### 🤖 Agents
 
@@ -35,6 +36,7 @@ Advanced capabilities with bundled resources:
 - **`experiment-tracking`** - Reproducible research and data management
 - **`arxiv-search`** - arXiv paper search, download, and metadata retrieval
 - **`latex-writing`** - LaTeX templates, cheatsheet, and paper formatting
+- **`huggingface`** - HuggingFace Hub model and dataset search
 
 ### ⚡ Automation (Hooks)
 
@@ -59,6 +61,9 @@ Event-driven automation for research workflows:
 # Set environment variables
 export TAVILY_API_KEY=<your-api-key>          # For web search (Tavily)
 export ARXIV_STORAGE_PATH=~/Documents/arxiv_papers  # For arXiv paper storage (optional)
+
+# HuggingFace uses OAuth authentication - no API key needed
+# First use will prompt for browser login
 ```
 
 ### Prerequisites
@@ -78,6 +83,7 @@ export ARXIV_STORAGE_PATH=~/Documents/arxiv_papers  # For arXiv paper storage (o
 /search-papers "machine learning interpretability"
 /track-experiment create --title "Drug efficacy study"
 /arxiv search "transformer architecture" --category cs.LG
+/huggingface search-models --task text-generation --limit 10
 ```
 
 ### Using Agents
@@ -101,6 +107,9 @@ Skills trigger automatically based on keywords:
 
 "Search arXiv for recent papers on diffusion models"
 [Triggers arxiv-search skill]
+
+"Find a good model for sentiment analysis on HuggingFace"
+[Triggers huggingface skill]
 ```
 
 ## Documentation

@@ -37,7 +37,8 @@
         "./skills/academic-research",
         "./skills/data-visualization",
         "./skills/academic-writing",
-        "./skills/experiment-tracking"
+        "./skills/experiment-tracking",
+        "./skills/arxiv-search"
       ],
       "mcpServers": {
         "fs": {
@@ -77,6 +78,17 @@
             "@modelcontextprotocol/server-git",
             "--repository",
             "/Users/ianleely/Documents/Codes/research-skills"
+          ]
+        },
+        "arxiv": {
+          "type": "stdio",
+          "command": "uv",
+          "args": [
+            "tool",
+            "run",
+            "arxiv-mcp-server",
+            "--storage-path",
+            "${ARXIV_STORAGE_PATH:-./arxiv_papers}"
           ]
         }
       }

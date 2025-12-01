@@ -1,0 +1,325 @@
+% ACM Publication Template
+% Research Skills Plugin - LaTeX Writing Skill
+%
+% Document class options:
+%   manuscript - For review submission
+%   acmsmall   - Small single column format
+%   acmlarge   - Large single column format
+%   acmtog     - For TOG journal articles
+%   sigconf    - For SIGCONF proceedings
+%   sigplan    - For SIGPLAN proceedings
+%   sigchi     - For SIGCHI proceedings
+%
+% Compile with: pdflatex paper.tex && bibtex paper && pdflatex paper.tex && pdflatex paper.tex
+
+\documentclass[sigconf,anonymous]{acmart}
+% Use 'anonymous' for double-blind review, remove for camera-ready
+
+%% ============================================================================
+%% PACKAGES
+%% ============================================================================
+
+% Additional math support
+\usepackage{amsmath,amssymb}
+
+% Graphics
+\usepackage{graphicx}
+
+% Tables
+\usepackage{booktabs}
+
+% Algorithms
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+% Subcaptions
+\usepackage{subcaption}
+
+%% ============================================================================
+%% ACM METADATA
+%% ============================================================================
+
+% Copyright
+\setcopyright{acmcopyright}
+\copyrightyear{2024}
+\acmYear{2024}
+\acmDOI{XXXXXXX.XXXXXXX}
+
+% Conference info
+\acmConference[Conference'24]{ACM Conference Name}{Month Day--Day, 2024}{City, Country}
+\acmBooktitle{Proceedings of ACM Conference Name (Conference'24), Month Day--Day, 2024, City, Country}
+\acmPrice{15.00}
+\acmISBN{978-1-4503-XXXX-X/24/XX}
+
+%% ============================================================================
+%% CUSTOM COMMANDS
+%% ============================================================================
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\argmax}{\operatorname{argmax}}
+\newcommand{\argmin}{\operatorname{argmin}}
+
+%% ============================================================================
+%% DOCUMENT CONTENT
+%% ============================================================================
+
+\begin{document}
+
+%% ----------------------------------------------------------------------------
+%% TITLE AND AUTHORS
+%% ----------------------------------------------------------------------------
+
+\title{Your Paper Title Here}
+\subtitle{Subtitle if needed}
+
+\author{First Author}
+\email{first@university.edu}
+\orcid{0000-0000-0000-0000}
+\affiliation{
+    \institution{University Name}
+    \department{Department of Computer Science}
+    \city{City}
+    \country{Country}
+}
+
+\author{Second Author}
+\email{second@another.edu}
+\affiliation{
+    \institution{Another University}
+    \department{Department of Computer Science}
+    \city{City}
+    \country{Country}
+}
+
+\author{Third Author}
+\email{third@university.edu}
+\affiliation{
+    \institution{University Name}
+    \department{Department of Computer Science}
+    \city{City}
+    \country{Country}
+}
+
+%% ----------------------------------------------------------------------------
+%% ABSTRACT
+%% ----------------------------------------------------------------------------
+
+\begin{abstract}
+    This template provides guidance for ACM publication formatting.
+    Write a concise abstract of 150-250 words summarizing the problem,
+    approach, key results, and conclusions. The abstract should be
+    self-contained and not include citations.
+\end{abstract}
+
+%% ----------------------------------------------------------------------------
+%% CCS CONCEPTS AND KEYWORDS
+%% ----------------------------------------------------------------------------
+
+% CCS Concepts - see https://dl.acm.org/ccs
+\begin{CCSXML}
+<ccs2012>
+   <concept>
+       <concept_id>10010147.10010178.10010179</concept_id>
+       <concept_desc>Computing methodologies~Machine learning</concept_desc>
+       <concept_significance>500</concept_significance>
+   </concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Computing methodologies~Machine learning}
+
+\keywords{keyword1, keyword2, keyword3, keyword4}
+
+%% ----------------------------------------------------------------------------
+%% TITLE PAGE
+%% ----------------------------------------------------------------------------
+
+\maketitle
+
+%% ----------------------------------------------------------------------------
+%% INTRODUCTION
+%% ----------------------------------------------------------------------------
+
+\section{Introduction}
+\label{sec:intro}
+
+Introduce your research problem and motivate the work. ACM papers typically
+follow this structure for the introduction:
+
+\begin{itemize}
+    \item Establish the context and importance of the research area
+    \item Describe the specific problem being addressed
+    \item Briefly review existing approaches and their limitations
+    \item State your contributions clearly
+    \item Outline the paper organization
+\end{itemize}
+
+Our main contributions are:
+\begin{enumerate}
+    \item First contribution
+    \item Second contribution
+    \item Third contribution
+\end{enumerate}
+
+%% ----------------------------------------------------------------------------
+%% RELATED WORK
+%% ----------------------------------------------------------------------------
+
+\section{Related Work}
+\label{sec:related}
+
+Review relevant prior work. Use citations like \cite{example2024} to reference
+related papers.
+
+\subsection{Topic Area A}
+Discuss related work in this area.
+
+\subsection{Topic Area B}
+Discuss related work in another area.
+
+%% ----------------------------------------------------------------------------
+%% METHODOLOGY
+%% ----------------------------------------------------------------------------
+
+\section{Methodology}
+\label{sec:method}
+
+Describe your approach in detail.
+
+\subsection{Problem Definition}
+
+Formally define the problem:
+\begin{equation}
+    \min_{\theta} \mathcal{L}(\theta) = \frac{1}{n} \sum_{i=1}^{n} \ell(f_\theta(x_i), y_i)
+    \label{eq:objective}
+\end{equation}
+
+\subsection{Proposed Approach}
+
+Describe your method. You can use algorithms:
+
+\begin{algorithm}
+\caption{Algorithm Name}
+\label{alg:method}
+\begin{algorithmic}[1]
+    \STATE \textbf{Input:} Data $\mathcal{D}$, learning rate $\eta$
+    \STATE Initialize parameters $\theta_0$
+    \FOR{$t = 1$ to $T$}
+        \STATE Compute gradient $g_t = \nabla \mathcal{L}(\theta_t)$
+        \STATE Update $\theta_{t+1} = \theta_t - \eta g_t$
+    \ENDFOR
+    \STATE \textbf{Output:} Trained parameters $\theta_T$
+\end{algorithmic}
+\end{algorithm}
+
+%% ----------------------------------------------------------------------------
+%% EVALUATION
+%% ----------------------------------------------------------------------------
+
+\section{Evaluation}
+\label{sec:eval}
+
+Present your experimental evaluation.
+
+\subsection{Experimental Setup}
+
+Describe datasets, metrics, baselines, and implementation details.
+
+\subsection{Results}
+
+Present quantitative results:
+
+\begin{table}[htbp]
+    \caption{Comparison of methods on benchmark datasets.}
+    \label{tab:results}
+    \begin{tabular}{lcccc}
+        \toprule
+        Method & Dataset A & Dataset B & Dataset C & Avg \\
+        \midrule
+        Baseline 1 & 85.2 & 78.4 & 91.0 & 84.9 \\
+        Baseline 2 & 86.1 & 79.2 & 91.5 & 85.6 \\
+        \textbf{Ours} & \textbf{88.5} & \textbf{82.1} & \textbf{93.2} & \textbf{87.9} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Include figures:
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.9\columnwidth]{figure.pdf}
+    \fbox{\parbox{0.85\columnwidth}{\centering\vspace{2cm}Figure Placeholder\vspace{2cm}}}
+    \caption{Description of the figure and key observations.}
+    \label{fig:results}
+\end{figure}
+
+\subsection{Analysis}
+
+Provide detailed analysis of results, including ablation studies.
+
+%% ----------------------------------------------------------------------------
+%% DISCUSSION
+%% ----------------------------------------------------------------------------
+
+\section{Discussion}
+\label{sec:discussion}
+
+Discuss implications, limitations, and potential impact of your work.
+
+\subsection{Limitations}
+
+Acknowledge limitations of your approach.
+
+\subsection{Future Work}
+
+Suggest directions for future research.
+
+%% ----------------------------------------------------------------------------
+%% CONCLUSION
+%% ----------------------------------------------------------------------------
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Summarize your contributions and key findings. Restate the significance and
+potential impact of your work.
+
+%% ----------------------------------------------------------------------------
+%% ACKNOWLEDGMENTS
+%% ----------------------------------------------------------------------------
+
+\begin{acks}
+This work was supported by [funding agency] under Grant No. [number].
+We thank the anonymous reviewers for their valuable feedback.
+\end{acks}
+
+%% ----------------------------------------------------------------------------
+%% REFERENCES
+%% ----------------------------------------------------------------------------
+
+\bibliographystyle{ACM-Reference-Format}
+% \bibliography{references}  % Uncomment when using .bib file
+
+% Sample references (remove when using .bib file)
+\begin{thebibliography}{9}
+\bibitem{example2024}
+Author, A., Author, B., \& Author, C. 2024.
+Title of the paper.
+In \textit{Proceedings of ACM Conference (Conference'24)}.
+ACM, New York, NY, USA, 1--10.
+\url{https://doi.org/10.1145/XXXXXXX.XXXXXXX}
+\end{thebibliography}
+
+%% ----------------------------------------------------------------------------
+%% APPENDIX
+%% ----------------------------------------------------------------------------
+
+\appendix
+
+\section{Supplementary Material}
+\label{sec:appendix}
+
+Include additional details, proofs, or extended results.
+
+\end{document}

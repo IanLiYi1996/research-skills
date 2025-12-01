@@ -1,0 +1,259 @@
+% IEEE Conference/Transaction Paper Template
+% Research Skills Plugin - LaTeX Writing Skill
+%
+% For IEEE Transactions, use: \documentclass[journal]{IEEEtran}
+% For IEEE Conferences, use: \documentclass[conference]{IEEEtran}
+%
+% Compile with: pdflatex paper.tex && bibtex paper && pdflatex paper.tex && pdflatex paper.tex
+
+\documentclass[conference]{IEEEtran}
+% For journal papers, use: \documentclass[journal]{IEEEtran}
+
+%% ============================================================================
+%% PACKAGES
+%% ============================================================================
+
+% Mathematics
+\usepackage{amsmath,amssymb,amsfonts}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{textcomp}
+
+% Algorithms
+\usepackage{algorithmic}
+
+% Tables
+\usepackage{array}
+\usepackage{multirow}
+
+% Citations
+\usepackage{cite}
+
+% Colors (optional)
+\usepackage{xcolor}
+
+% Hyperlinks (load last)
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue
+}
+
+%% ============================================================================
+%% CUSTOM COMMANDS
+%% ============================================================================
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\argmax}{\operatorname{argmax}}
+\newcommand{\argmin}{\operatorname{argmin}}
+
+%% ============================================================================
+%% DOCUMENT METADATA
+%% ============================================================================
+
+\title{Your Paper Title Here\\
+{\footnotesize Subtitle if needed}}
+
+\author{
+    \IEEEauthorblockN{First Author\IEEEauthorrefmark{1},
+    Second Author\IEEEauthorrefmark{2}, and
+    Third Author\IEEEauthorrefmark{1}}
+    \IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Computer Science\\
+    University Name, City, Country\\
+    Email: \{first, third\}@university.edu}
+    \IEEEauthorblockA{\IEEEauthorrefmark{2}Department of Electrical Engineering\\
+    Another University, City, Country\\
+    Email: second@another.edu}
+}
+
+%% ============================================================================
+%% DOCUMENT CONTENT
+%% ============================================================================
+
+\begin{document}
+
+\maketitle
+
+%% ----------------------------------------------------------------------------
+%% ABSTRACT
+%% ----------------------------------------------------------------------------
+
+\begin{abstract}
+    This document provides a template for IEEE conference and journal papers.
+    The abstract should be 150-250 words and summarize the paper's objectives,
+    methodology, key results, and conclusions. Do not include citations or
+    abbreviations in the abstract.
+\end{abstract}
+
+%% ----------------------------------------------------------------------------
+%% KEYWORDS
+%% ----------------------------------------------------------------------------
+
+\begin{IEEEkeywords}
+    keyword1, keyword2, keyword3, keyword4, keyword5
+\end{IEEEkeywords}
+
+%% ----------------------------------------------------------------------------
+%% INTRODUCTION
+%% ----------------------------------------------------------------------------
+
+\section{Introduction}
+\label{sec:intro}
+
+Introduce the problem and motivate the research. IEEE papers typically have
+a dense introduction that covers:
+
+\begin{itemize}
+    \item Background and motivation
+    \item Problem statement
+    \item Brief literature review
+    \item Main contributions (often as a bulleted list)
+    \item Paper organization
+\end{itemize}
+
+The main contributions of this paper are:
+\begin{enumerate}
+    \item First contribution
+    \item Second contribution
+    \item Third contribution
+\end{enumerate}
+
+The rest of this paper is organized as follows. Section~\ref{sec:related}
+reviews related work. Section~\ref{sec:method} presents our methodology.
+Section~\ref{sec:experiments} describes experiments and results.
+Section~\ref{sec:conclusion} concludes the paper.
+
+%% ----------------------------------------------------------------------------
+%% RELATED WORK
+%% ----------------------------------------------------------------------------
+
+\section{Related Work}
+\label{sec:related}
+
+Review relevant literature. In IEEE papers, this section is often brief and
+focused. Cite papers using~\cite{ref1} or multiple citations~\cite{ref1,ref2}.
+
+\subsection{Topic Area A}
+Discuss related work in area A.
+
+\subsection{Topic Area B}
+Discuss related work in area B.
+
+%% ----------------------------------------------------------------------------
+%% METHODOLOGY
+%% ----------------------------------------------------------------------------
+
+\section{Proposed Method}
+\label{sec:method}
+
+Describe your methodology. IEEE papers often use many equations and algorithms.
+
+\subsection{Problem Formulation}
+
+Define the problem mathematically:
+\begin{equation}
+    \min_{\mathbf{x}} f(\mathbf{x}) \quad \text{subject to} \quad g(\mathbf{x}) \leq 0
+    \label{eq:problem}
+\end{equation}
+
+\subsection{Algorithm Description}
+
+Present your algorithm:
+\begin{equation}
+    x_{t+1} = x_t - \alpha \nabla f(x_t)
+    \label{eq:update}
+\end{equation}
+
+You can also use the algorithmic environment:
+\begin{algorithmic}
+    \STATE Initialize $x_0$
+    \FOR{$t = 1$ to $T$}
+        \STATE Compute gradient $g_t = \nabla f(x_t)$
+        \STATE Update $x_{t+1} = x_t - \alpha g_t$
+    \ENDFOR
+    \RETURN $x_T$
+\end{algorithmic}
+
+%% ----------------------------------------------------------------------------
+%% EXPERIMENTS
+%% ----------------------------------------------------------------------------
+
+\section{Experiments}
+\label{sec:experiments}
+
+Present experimental results.
+
+\subsection{Experimental Setup}
+
+Describe datasets, metrics, and baselines.
+
+\subsection{Results}
+
+Present results in tables:
+
+\begin{table}[htbp]
+    \caption{Comparison of Methods}
+    \label{tab:results}
+    \centering
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        \textbf{Method} & \textbf{Accuracy} & \textbf{F1} & \textbf{Time (s)} \\
+        \hline
+        Baseline 1 & 85.2 & 0.83 & 12.5 \\
+        Baseline 2 & 86.1 & 0.84 & 15.2 \\
+        \textbf{Ours} & \textbf{88.5} & \textbf{0.87} & 13.8 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Include figures:
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.45\textwidth]{figure.pdf}
+    \fbox{\parbox{0.4\textwidth}{\centering\vspace{1.5cm}Figure Placeholder\vspace{1.5cm}}}
+    \caption{Description of the figure.}
+    \label{fig:results}
+\end{figure}
+
+\subsection{Analysis}
+
+Analyze the results and discuss key findings.
+
+%% ----------------------------------------------------------------------------
+%% CONCLUSION
+%% ----------------------------------------------------------------------------
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Summarize contributions and main findings. Briefly mention limitations and
+future work directions.
+
+%% ----------------------------------------------------------------------------
+%% ACKNOWLEDGMENT
+%% ----------------------------------------------------------------------------
+
+\section*{Acknowledgment}
+
+This work was supported by [funding agency] under Grant No. [number].
+
+%% ----------------------------------------------------------------------------
+%% REFERENCES
+%% ----------------------------------------------------------------------------
+
+\begin{thebibliography}{00}
+\bibitem{ref1}
+A. Author, B. Author, and C. Author, ``Title of the paper,''
+\textit{IEEE Trans. on Something}, vol. 1, no. 1, pp. 1--10, 2024.
+
+\bibitem{ref2}
+D. Author and E. Author, ``Another paper title,''
+in \textit{Proc. IEEE Conference}, City, Country, 2024, pp. 100--105.
+\end{thebibliography}
+
+\end{document}

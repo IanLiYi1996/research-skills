@@ -38,7 +38,8 @@
         "./skills/data-visualization",
         "./skills/academic-writing",
         "./skills/experiment-tracking",
-        "./skills/arxiv-search"
+        "./skills/arxiv-search",
+        "./skills/latex-writing"
       ],
       "mcpServers": {
         "fs": {

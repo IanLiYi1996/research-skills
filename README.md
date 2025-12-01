@@ -13,6 +13,7 @@ Custom slash commands for common research tasks:
 - **`/search-papers`** - Literature search across academic databases
 - **`/track-experiment`** - Experiment tracking and result management
 - **`/arxiv`** - Search, download, and manage arXiv papers
+- **`/latex`** - Create and format LaTeX documents, equations, tables, and figures
 
 ### 🤖 Agents
 
@@ -22,6 +23,7 @@ Specialized AI agents for research workflows:
 - **`data-analyst`** - Statistical analysis and data visualization expert
 - **`experiment-manager`** - Experiment tracking and reproducibility specialist
 - **`writing-assistant`** - Academic writing and manuscript preparation expert
+- **`latex-expert`** - LaTeX typesetting and journal paper formatting specialist
 
 ### 🎓 Skills
 
@@ -32,6 +34,7 @@ Advanced capabilities with bundled resources:
 - **`academic-writing`** - Manuscript drafting and scholarly writing
 - **`experiment-tracking`** - Reproducible research and data management
 - **`arxiv-search`** - arXiv paper search, download, and metadata retrieval
+- **`latex-writing`** - LaTeX templates, cheatsheet, and paper formatting
 
 ### ⚡ Automation (Hooks)
 

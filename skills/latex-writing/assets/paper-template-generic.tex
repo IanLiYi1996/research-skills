@@ -1,0 +1,323 @@
+% Generic Academic Paper Template
+% Research Skills Plugin - LaTeX Writing Skill
+%
+% Usage: Copy this file and modify for your paper
+% Compile with: pdflatex paper.tex && bibtex paper && pdflatex paper.tex && pdflatex paper.tex
+
+\documentclass[11pt,a4paper]{article}
+
+%% ============================================================================
+%% PACKAGES
+%% ============================================================================
+
+% Page layout
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% Mathematics
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+
+% Graphics and figures
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+
+% Colors and hyperlinks
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+% Bibliography
+\usepackage[numbers,sort&compress]{natbib}
+
+% Code listings (optional)
+\usepackage{listings}
+
+% Units (optional)
+\usepackage{siunitx}
+
+% Clever references
+\usepackage{cleveref}
+
+% Typography improvements
+\usepackage{microtype}
+
+%% ============================================================================
+%% CUSTOM COMMANDS
+%% ============================================================================
+
+% Math shortcuts
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\argmax}{\operatorname{argmax}}
+\newcommand{\argmin}{\operatorname{argmin}}
+
+% Vector and matrix notation
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\mathbf{#1}}
+
+% Theorem environments
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+%% ============================================================================
+%% DOCUMENT METADATA
+%% ============================================================================
+
+\title{Your Paper Title Here}
+
+\author{
+    First Author\thanks{Corresponding author. Email: first@example.com} \\
+    \small Department of Computer Science \\
+    \small University Name \\
+    \and
+    Second Author \\
+    \small Department of Mathematics \\
+    \small Another University
+}
+
+\date{\today}
+
+%% ============================================================================
+%% DOCUMENT CONTENT
+%% ============================================================================
+
+\begin{document}
+
+\maketitle
+
+%% ----------------------------------------------------------------------------
+%% ABSTRACT
+%% ----------------------------------------------------------------------------
+
+\begin{abstract}
+    Write your abstract here. The abstract should be a concise summary of your
+    paper, typically 150-250 words. It should include: (1) the problem or
+    research question, (2) the methodology or approach, (3) key findings or
+    results, and (4) main conclusions and implications.
+
+    \textbf{Keywords:} keyword1, keyword2, keyword3, keyword4, keyword5
+\end{abstract}
+
+%% ----------------------------------------------------------------------------
+%% INTRODUCTION
+%% ----------------------------------------------------------------------------
+
+\section{Introduction}
+\label{sec:introduction}
+
+Introduce your research topic and motivate the problem. This section should:
+\begin{itemize}
+    \item Establish the context and importance of the research area
+    \item Review relevant background and prior work
+    \item Identify the gap or problem your research addresses
+    \item State your research objectives and contributions
+    \item Outline the structure of the paper
+\end{itemize}
+
+The remainder of this paper is organized as follows. \Cref{sec:related} reviews
+related work. \Cref{sec:method} describes our methodology. \Cref{sec:results}
+presents experimental results. \Cref{sec:discussion} discusses the findings.
+Finally, \Cref{sec:conclusion} concludes the paper.
+
+%% ----------------------------------------------------------------------------
+%% RELATED WORK
+%% ----------------------------------------------------------------------------
+
+\section{Related Work}
+\label{sec:related}
+
+Review the relevant literature and position your work within the field.
+
+\subsection{Topic Area 1}
+
+Discuss related work in the first topic area. Use citations like
+\cite{example2024} to reference prior work.
+
+\subsection{Topic Area 2}
+
+Discuss related work in the second topic area.
+
+%% ----------------------------------------------------------------------------
+%% METHODOLOGY
+%% ----------------------------------------------------------------------------
+
+\section{Methodology}
+\label{sec:method}
+
+Describe your approach or methodology in detail.
+
+\subsection{Problem Formulation}
+
+Define the problem mathematically. For example:
+
+\begin{definition}[Problem Name]
+    Given a dataset $\mathcal{D} = \{(\vec{x}_i, y_i)\}_{i=1}^n$ where
+    $\vec{x}_i \in \R^d$ and $y_i \in \{0, 1\}$, find the optimal parameters
+    $\vec{\theta}^*$ that minimize:
+    \begin{equation}
+        \vec{\theta}^* = \argmin_{\vec{\theta}} \frac{1}{n} \sum_{i=1}^n
+        \mathcal{L}(f(\vec{x}_i; \vec{\theta}), y_i)
+        \label{eq:objective}
+    \end{equation}
+\end{definition}
+
+\subsection{Proposed Approach}
+
+Describe your proposed method. You can use aligned equations:
+
+\begin{align}
+    \nabla_\theta \mathcal{L} &= \frac{\partial \mathcal{L}}{\partial \theta}
+    \label{eq:gradient} \\
+    \theta_{t+1} &= \theta_t - \eta \nabla_\theta \mathcal{L}
+    \label{eq:update}
+\end{align}
+
+%% ----------------------------------------------------------------------------
+%% RESULTS
+%% ----------------------------------------------------------------------------
+
+\section{Experimental Results}
+\label{sec:results}
+
+Present your experimental setup and results.
+
+\subsection{Experimental Setup}
+
+Describe datasets, evaluation metrics, and baselines.
+
+\subsection{Main Results}
+
+Present your main results. Use tables for quantitative comparisons:
+
+\begin{table}[htbp]
+    \centering
+    \caption{Comparison of methods on benchmark datasets. Best results in
+    \textbf{bold}.}
+    \label{tab:results}
+    \begin{tabular}{lccc}
+        \toprule
+        Method & Dataset A & Dataset B & Dataset C \\
+        \midrule
+        Baseline 1 & 85.2 & 78.4 & 91.0 \\
+        Baseline 2 & 86.1 & 79.2 & 91.5 \\
+        Our Method & \textbf{88.5} & \textbf{82.1} & \textbf{93.2} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Include figures for visual results:
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{figures/results.pdf}
+    \fbox{\parbox{0.8\textwidth}{\centering\vspace{2cm}Figure Placeholder\vspace{2cm}}}
+    \caption{Visualization of experimental results. (a) Subplot description.
+    (b) Another subplot description.}
+    \label{fig:results}
+\end{figure}
+
+\subsection{Ablation Study}
+
+Analyze the contribution of different components.
+
+%% ----------------------------------------------------------------------------
+%% DISCUSSION
+%% ----------------------------------------------------------------------------
+
+\section{Discussion}
+\label{sec:discussion}
+
+Interpret your results and discuss their implications.
+
+\subsection{Key Findings}
+
+Summarize the main findings from your experiments.
+
+\subsection{Limitations}
+
+Acknowledge limitations of your approach.
+
+\subsection{Future Work}
+
+Suggest directions for future research.
+
+%% ----------------------------------------------------------------------------
+%% CONCLUSION
+%% ----------------------------------------------------------------------------
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Summarize your contributions and main findings. Restate the significance of
+your work and its potential impact.
+
+%% ----------------------------------------------------------------------------
+%% ACKNOWLEDGMENTS
+%% ----------------------------------------------------------------------------
+
+\section*{Acknowledgments}
+
+Thank funding agencies, collaborators, and reviewers. For example:
+This work was supported by [Grant Name] under Grant No. [Number].
+
+%% ----------------------------------------------------------------------------
+%% BIBLIOGRAPHY
+%% ----------------------------------------------------------------------------
+
+\bibliographystyle{plainnat}
+% \bibliography{references}  % Uncomment and create references.bib
+
+% Sample bibliography entries (remove when using .bib file)
+\begin{thebibliography}{9}
+\bibitem{example2024}
+Author, A., \& Author, B. (2024).
+\newblock Title of the paper.
+\newblock \emph{Journal Name}, 1(1), 1--10.
+\end{thebibliography}
+
+%% ----------------------------------------------------------------------------
+%% APPENDIX
+%% ----------------------------------------------------------------------------
+
+\appendix
+
+\section{Supplementary Material}
+\label{sec:appendix}
+
+Include additional details, proofs, or extended results here.
+
+\begin{theorem}[Example Theorem]
+    For all $n \in \N$, we have $\sum_{i=1}^n i = \frac{n(n+1)}{2}$.
+\end{theorem}
+
+\begin{proof}
+    By induction on $n$. The base case $n=1$ is trivial. For the inductive
+    step, assume the result holds for $n$. Then for $n+1$:
+    \begin{align*}
+        \sum_{i=1}^{n+1} i &= \sum_{i=1}^n i + (n+1) \\
+        &= \frac{n(n+1)}{2} + (n+1) \\
+        &= \frac{(n+1)(n+2)}{2}
+    \end{align*}
+    which completes the proof.
+\end{proof}
+
+\end{document}

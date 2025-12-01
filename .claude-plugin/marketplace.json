@@ -1,8 +1,8 @@
 {
   "name": "research-skills",
   "owner": {
-    "name": "Research Skills Team",
-    "email": "research@example.com"
+    "name": "Ian Lee",
+    "email": "ianleely@amazon.com"
   },
   "metadata": {
     "description": "Comprehensive research and analysis toolkit for academic workflows",
@@ -14,11 +14,11 @@
       "description": "Comprehensive research automation with academic tools, data analysis, and workflow management. Supports literature review, data visualization, paper writing, and experiment tracking.",
       "version": "1.0.0",
       "author": {
-        "name": "Research Skills Team",
-        "email": "research@example.com"
+        "name": "Ian Lee",
+        "email": "ianleely@amazon.com"
       },
-      "homepage": "https://github.com/yourusername/research-skills",
-      "repository": "https://github.com/yourusername/research-skills",
+      "homepage": "https://github.com/IanLiYi1996/research-skills",
+      "repository": "https://github.com/IanLiYi1996/research-skills",
       "license": "MIT",
       "keywords": [
         "research",

@@ -46,7 +46,7 @@ Event-driven automation for research workflows:
 
 ```bash
 # Add marketplace
-/plugin marketplace add /Users/ianleely/Documents/Codes/research-skills
+/plugin marketplace add IanLiYi1996/research-skills
 
 # Install plugin
 /plugin install research-toolkit@research-skills
@@ -94,7 +94,7 @@ Skills trigger automatically based on keywords:
 
 ## License
 
-MIT License
+MIT License - see [LICENSE](LICENSE)
 
 ## Version
 

@@ -234,17 +234,18 @@ Full dataset card including:
 
 ## Authentication
 
-HuggingFace MCP server uses OAuth authentication:
+HuggingFace MCP server uses token authentication:
 
-1. First command triggers authentication prompt
-2. Log in to HuggingFace in browser
-3. Authorize the application
-4. Continue using commands
-
-No environment variables needed - authentication is handled automatically.
+1. Get your token from [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
+2. Create a token with "Read" access
+3. Set environment variable:
+   ```bash
+   export HF_TOKEN=your_token_here
+   ```
+4. Restart Claude Code
 
 ## Requirements
 
 - Internet connection
 - HuggingFace account (free)
-- Browser for OAuth authentication (first time only)
+- HF_TOKEN environment variable set

@@ -86,7 +86,7 @@ The plugin uses four MCP servers:
 3. **SQLite** - Database storage (auto-configured)
 4. **Git** - Version control (auto-configured)
 5. **ArXiv** - Academic paper search and download (requires `uv` installed)
-6. **HuggingFace** - Model and dataset search (OAuth authentication)
+6. **HuggingFace** - Model and dataset search (requires HF_TOKEN)
 
 To verify MCP servers work:
 
@@ -387,16 +387,19 @@ your-research-project/
    ```
 4. Restart Claude Code after setting environment variables
 
-### HuggingFace OAuth Authentication
+### HuggingFace Token Authentication
 
 **Problem**: HuggingFace commands not working
 
 **Solution**:
-1. HuggingFace uses OAuth (browser-based login), not API keys
-2. First use will open browser for authentication
-3. Log in to your HuggingFace account
-4. Authorize the application
-5. Return to Claude Code - authentication is saved for future use
+1. Get your HuggingFace token from [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
+2. Create a token with "Read" access
+3. Set the environment variable:
+   ```bash
+   export HF_TOKEN=your_token_here
+   ```
+4. Add to `~/.zshrc` or `~/.bashrc` for persistence
+5. Restart Claude Code
 
 ### Python Scripts Not Running
 

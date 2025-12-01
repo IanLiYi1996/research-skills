@@ -61,9 +61,7 @@ Event-driven automation for research workflows:
 # Set environment variables
 export TAVILY_API_KEY=<your-api-key>          # For web search (Tavily)
 export ARXIV_STORAGE_PATH=~/Documents/arxiv_papers  # For arXiv paper storage (optional)
-
-# HuggingFace uses OAuth authentication - no API key needed
-# First use will prompt for browser login
+export HF_TOKEN=<your-huggingface-token>      # For HuggingFace Hub access
 ```
 
 ### Prerequisites

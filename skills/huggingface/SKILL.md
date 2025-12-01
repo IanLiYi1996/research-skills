@@ -62,12 +62,12 @@ This skill uses the `huggingface` MCP server configured in the plugin. The serve
 
 ### Authentication
 
-The HuggingFace MCP server uses OAuth authentication:
+The HuggingFace MCP server uses token authentication:
 
-1. First use will prompt for authentication
-2. Log in to your HuggingFace account in browser
-3. Authorize the application
-4. Token is saved for future sessions
+1. Get your token from [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
+2. Create a token with "Read" access
+3. Set environment variable: `export HF_TOKEN=your_token_here`
+4. Restart Claude Code to apply changes
 
 ## Common Tasks
 

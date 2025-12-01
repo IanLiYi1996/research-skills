@@ -1,0 +1,85 @@
+{
+  "name": "research-skills",
+  "owner": {
+    "name": "Research Skills Team",
+    "email": "research@example.com"
+  },
+  "metadata": {
+    "description": "Comprehensive research and analysis toolkit for academic workflows",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "research-toolkit",
+      "description": "Comprehensive research automation with academic tools, data analysis, and workflow management. Supports literature review, data visualization, paper writing, and experiment tracking.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Research Skills Team",
+        "email": "research@example.com"
+      },
+      "homepage": "https://github.com/yourusername/research-skills",
+      "repository": "https://github.com/yourusername/research-skills",
+      "license": "MIT",
+      "keywords": [
+        "research",
+        "academic",
+        "analysis",
+        "data",
+        "automation",
+        "literature-review",
+        "visualization",
+        "experiments"
+      ],
+      "category": "productivity",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/academic-research",
+        "./skills/data-visualization",
+        "./skills/academic-writing",
+        "./skills/experiment-tracking"
+      ],
+      "mcpServers": {
+        "fs": {
+          "type": "stdio",
+          "command": "npx",
+          "args": [
+            "-y",
+            "@modelcontextprotocol/server-filesystem",
+            "/Users/ianleely/Documents/Codes/research-skills"
+          ]
+        },
+        "search": {
+          "type": "stdio",
+          "command": "npx",
+          "args": [
+            "-y",
+            "@modelcontextprotocol/server-brave-search"
+          ],
+          "env": {
+            "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+          }
+        },
+        "sqlite": {
+          "type": "stdio",
+          "command": "npx",
+          "args": [
+            "-y",
+            "@modelcontextprotocol/server-sqlite",
+            "/Users/ianleely/Documents/Codes/research-skills/research.db"
+          ]
+        },
+        "git": {
+          "type": "stdio",
+          "command": "npx",
+          "args": [
+            "-y",
+            "@modelcontextprotocol/server-git",
+            "--repository",
+            "/Users/ianleely/Documents/Codes/research-skills"
+          ]
+        }
+      }
+    }
+  ]
+}

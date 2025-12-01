@@ -19,7 +19,15 @@ Generate structured summaries of academic papers:
 
 **Parameters:**
 - `document-path`: Path to document file (PDF, DOCX, TXT, or Markdown)
-- `options` (optional): Summary preferences (length, format, citation style)
+
+**Options:**
+- `--template <type>`: Template type - `brief`, `standard`, `detailed` (default: standard)
+- `--output <path>`: Save summary to specified markdown file
+- `--citation <style>`: Citation style - `apa`, `mla`, `chicago`, `harvard`, `ieee` (default: apa)
+- `--length <type>`: Summary length - `brief`, `standard`, `comprehensive`
+- `--focus <sections>`: Focus on specific sections (comma-separated)
+- `--batch`: Process multiple files
+- `--format <type>`: Output format - `markdown`, `json`, `txt` (default: markdown)
 
 ## Workflow
 
@@ -99,6 +107,33 @@ Emphasizes methodology and results sections.
 /summarize papers/*.pdf --batch --output literature-review.md
 ```
 Summarizes multiple papers and compiles into single document.
+
+### Using Templates
+```
+/summarize paper.pdf --template brief --output summaries/quick-summary.md
+```
+Uses brief template for a quick overview.
+
+```
+/summarize paper.pdf --template detailed --output summaries/full-analysis.md
+```
+Uses detailed template for comprehensive analysis.
+
+### Batch with Template
+```
+/summarize papers/*.pdf --batch --template standard --output summaries/
+```
+Processes multiple papers using standard template, saving to summaries folder.
+
+## Templates
+
+Three summary templates are available in `skills/academic-research/assets/`:
+
+| Template | Description | Use Case |
+|----------|-------------|----------|
+| `brief` | Metadata, core summary, key findings, citation | Quick reference, initial screening |
+| `standard` | Executive summary, research question, methodology, findings, conclusions | Regular literature review |
+| `detailed` | Full analysis with contributions, limitations, future work, critical evaluation | In-depth analysis, thesis research |
 
 ## Requirements
 

@@ -32,7 +32,7 @@ git --version
 ### Step 1: Add Plugin Marketplace
 
 ```bash
-/plugin marketplace add /Users/ianleely/Documents/Codes/research-skills
+/plugin marketplace add IanLiYi1996/research-skills
 ```
 
 This adds the plugin marketplace to Claude Code.

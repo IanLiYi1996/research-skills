@@ -55,10 +55,10 @@
           "command": "npx",
           "args": [
             "-y",
-            "@modelcontextprotocol/server-brave-search"
+            "tavily-mcp@0.1.4"
           ],
           "env": {
-            "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+            "TAVILY_API_KEY": "${TAVILY_API_KEY}"
           }
         },
         "sqlite": {

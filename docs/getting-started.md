@@ -61,16 +61,16 @@ Check that new commands are listed:
 
 ### Environment Variables
 
-For web search functionality, set up Brave Search API:
+For web search functionality, set up Tavily API:
 
-1. **Get API Key**: Visit [Brave Search API](https://brave.com/search/api/)
+1. **Get API Key**: Visit [Tavily](https://tavily.com) and sign up
 2. **Set Environment Variable**:
    ```bash
-   export BRAVE_API_KEY=your_api_key_here
+   export TAVILY_API_KEY=your_api_key_here
    ```
 3. **Make Permanent** (add to `~/.zshrc` or `~/.bashrc`):
    ```bash
-   echo 'export BRAVE_API_KEY=your_api_key_here' >> ~/.zshrc
+   echo 'export TAVILY_API_KEY=your_api_key_here' >> ~/.zshrc
    source ~/.zshrc
    ```
 
@@ -79,9 +79,10 @@ For web search functionality, set up Brave Search API:
 The plugin uses four MCP servers:
 
 1. **Filesystem** - Local file access (no config needed)
-2. **Brave Search** - Web search (requires API key above)
+2. **Tavily Search** - AI-powered web search (requires API key above)
 3. **SQLite** - Database storage (auto-configured)
 4. **Git** - Version control (auto-configured)
+5. **ArXiv** - Academic paper search and download (requires `uv` installed)
 
 To verify MCP servers work:
 
@@ -376,9 +377,9 @@ your-research-project/
    npx @modelcontextprotocol/server-filesystem --help
    ```
 2. Check Node.js installed: `node --version`
-3. For Brave Search, verify API key:
+3. For Tavily Search, verify API key:
    ```bash
-   echo $BRAVE_API_KEY
+   echo $TAVILY_API_KEY
    ```
 4. Restart Claude Code after setting environment variables
 

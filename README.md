@@ -54,7 +54,7 @@ Event-driven automation for research workflows:
 /plugin install research-toolkit@research-skills
 
 # Set environment variables
-export BRAVE_API_KEY=<your-api-key>           # For web search
+export TAVILY_API_KEY=<your-api-key>          # For web search (Tavily)
 export ARXIV_STORAGE_PATH=~/Documents/arxiv_papers  # For arXiv paper storage (optional)
 ```
 

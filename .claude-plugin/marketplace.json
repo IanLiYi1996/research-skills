@@ -63,25 +63,6 @@
             "TAVILY_API_KEY": "${TAVILY_API_KEY}"
           }
         },
-        "sqlite": {
-          "type": "stdio",
-          "command": "npx",
-          "args": [
-            "-y",
-            "@modelcontextprotocol/server-sqlite",
-            "${RESEARCH_DB_PATH:-./research.db}"
-          ]
-        },
-        "git": {
-          "type": "stdio",
-          "command": "npx",
-          "args": [
-            "-y",
-            "@modelcontextprotocol/server-git",
-            "--repository",
-            "${RESEARCH_GIT_PATH:-.}"
-          ]
-        },
         "arxiv": {
           "type": "stdio",
           "command": "uv",

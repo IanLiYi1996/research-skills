@@ -65,8 +65,6 @@ export HF_TOKEN=<your-huggingface-token>      # For HuggingFace Hub access
 # Optional environment variables (with defaults)
 export ARXIV_STORAGE_PATH=~/Documents/arxiv_papers  # Default: ./arxiv_papers
 export RESEARCH_FS_PATH=.                     # Filesystem access path, default: current directory
-export RESEARCH_DB_PATH=./research.db         # SQLite database path, default: ./research.db
-export RESEARCH_GIT_PATH=.                    # Git repository path, default: current directory
 ```
 
 ### Prerequisites

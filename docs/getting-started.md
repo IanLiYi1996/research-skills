@@ -83,10 +83,8 @@ The plugin uses four MCP servers:
 
 1. **Filesystem** - Local file access (no config needed)
 2. **Tavily Search** - AI-powered web search (requires API key above)
-3. **SQLite** - Database storage (auto-configured)
-4. **Git** - Version control (auto-configured)
-5. **ArXiv** - Academic paper search and download (requires `uv` installed)
-6. **HuggingFace** - Model and dataset search (requires HF_TOKEN)
+3. **ArXiv** - Academic paper search and download (requires `uv` installed)
+4. **HuggingFace** - Model and dataset search (requires HF_TOKEN)
 
 To verify MCP servers work:
 

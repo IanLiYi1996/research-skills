@@ -12,6 +12,7 @@ Custom slash commands for common research tasks:
 - **`/summarize`** - Research paper summarization and key findings extraction
 - **`/search-papers`** - Literature search across academic databases
 - **`/track-experiment`** - Experiment tracking and result management
+- **`/arxiv`** - Search, download, and manage arXiv papers
 
 ### 🤖 Agents
 
@@ -30,6 +31,7 @@ Advanced capabilities with bundled resources:
 - **`data-visualization`** - Publication-quality charts and statistical analysis
 - **`academic-writing`** - Manuscript drafting and scholarly writing
 - **`experiment-tracking`** - Reproducible research and data management
+- **`arxiv-search`** - arXiv paper search, download, and metadata retrieval
 
 ### ⚡ Automation (Hooks)
 
@@ -51,9 +53,17 @@ Event-driven automation for research workflows:
 # Install plugin
 /plugin install research-toolkit@research-skills
 
-# Set environment variable (for web search)
-export BRAVE_API_KEY=<your-api-key>
+# Set environment variables
+export BRAVE_API_KEY=<your-api-key>           # For web search
+export ARXIV_STORAGE_PATH=~/Documents/arxiv_papers  # For arXiv paper storage (optional)
 ```
+
+### Prerequisites
+
+- **uv** - Required for arXiv MCP server. Install via:
+  ```bash
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+  ```
 
 ## Quick Start
 
@@ -64,6 +74,7 @@ export BRAVE_API_KEY=<your-api-key>
 /summarize papers/smith-2024-ml-paper.pdf
 /search-papers "machine learning interpretability"
 /track-experiment create --title "Drug efficacy study"
+/arxiv search "transformer architecture" --category cs.LG
 ```
 
 ### Using Agents
@@ -84,6 +95,9 @@ Skills trigger automatically based on keywords:
 
 "Create scatter plot for temperature vs pressure"
 [Triggers data-visualization skill]
+
+"Search arXiv for recent papers on diffusion models"
+[Triggers arxiv-search skill]
 ```
 
 ## Documentation

@@ -59,6 +59,8 @@ Check that new commands are listed:
 - `/arxiv`
 - `/latex`
 - `/huggingface`
+- `/fetch`
+- `/git`
 
 ## Configuration
 
@@ -79,12 +81,14 @@ For web search functionality, set up Tavily API:
 
 ### MCP Servers
 
-The plugin uses four MCP servers:
+The plugin uses six MCP servers:
 
 1. **Filesystem** - Local file access (no config needed)
 2. **Tavily Search** - AI-powered web search (requires API key above)
 3. **ArXiv** - Academic paper search and download (requires `uv` installed)
 4. **HuggingFace** - Model and dataset search (requires HF_TOKEN)
+5. **Fetch** - Web content fetching (requires `uv` installed)
+6. **Git** - Git version control operations (requires `uv` installed)
 
 To verify MCP servers work:
 

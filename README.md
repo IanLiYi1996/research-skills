@@ -15,6 +15,8 @@ Custom slash commands for common research tasks:
 - **`/arxiv`** - Search, download, and manage arXiv papers
 - **`/latex`** - Create and format LaTeX documents, equations, tables, and figures
 - **`/huggingface`** - Search HuggingFace Hub for models and datasets
+- **`/fetch`** - Fetch and retrieve content from web URLs
+- **`/git`** - Git version control for research projects
 
 ### 🤖 Agents
 
@@ -37,6 +39,8 @@ Advanced capabilities with bundled resources:
 - **`arxiv-search`** - arXiv paper search, download, and metadata retrieval
 - **`latex-writing`** - LaTeX templates, cheatsheet, and paper formatting
 - **`huggingface`** - HuggingFace Hub model and dataset search
+- **`web-fetch`** - Web content fetching and resource retrieval
+- **`git-research`** - Git version control for research reproducibility
 
 ### ⚡ Automation (Hooks)
 
@@ -65,11 +69,12 @@ export HF_TOKEN=<your-huggingface-token>      # For HuggingFace Hub access
 # Optional environment variables (with defaults)
 export ARXIV_STORAGE_PATH=~/Documents/arxiv_papers  # Default: ./arxiv_papers
 export RESEARCH_FS_PATH=.                     # Filesystem access path, default: current directory
+export RESEARCH_GIT_PATH=.                    # Git repository path, default: current directory
 ```
 
 ### Prerequisites
 
-- **uv** - Required for arXiv MCP server. Install via:
+- **uv** - Required for arXiv, fetch, and git MCP servers. Install via:
   ```bash
   curl -LsSf https://astral.sh/uv/install.sh | sh
   ```
@@ -85,6 +90,8 @@ export RESEARCH_FS_PATH=.                     # Filesystem access path, default:
 /track-experiment create --title "Drug efficacy study"
 /arxiv search "transformer architecture" --category cs.LG
 /huggingface search-models --task text-generation --limit 10
+/fetch https://arxiv.org/abs/2301.07041
+/git status
 ```
 
 ### Using Agents

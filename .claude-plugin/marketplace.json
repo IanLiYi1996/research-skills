@@ -40,7 +40,9 @@
         "./skills/experiment-tracking",
         "./skills/arxiv-search",
         "./skills/latex-writing",
-        "./skills/huggingface"
+        "./skills/huggingface",
+        "./skills/web-fetch",
+        "./skills/git-research"
       ],
       "mcpServers": {
         "fs": {
@@ -80,6 +82,22 @@
           "headers": {
             "Authorization": "Bearer ${HF_TOKEN}"
           }
+        },
+        "fetch": {
+          "type": "stdio",
+          "command": "uvx",
+          "args": [
+            "mcp-server-fetch"
+          ]
+        },
+        "git": {
+          "type": "stdio",
+          "command": "uvx",
+          "args": [
+            "mcp-server-git",
+            "--repository",
+            "${RESEARCH_GIT_PATH:-.}"
+          ]
         }
       }
     }

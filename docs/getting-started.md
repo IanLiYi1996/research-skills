@@ -61,6 +61,7 @@ Check that new commands are listed:
 - `/huggingface`
 - `/fetch`
 - `/git`
+- `/slides`
 
 ## Configuration
 
@@ -79,9 +80,17 @@ For web search functionality, set up Tavily API:
    source ~/.zshrc
    ```
 
+For Context7 code documentation, set up API key:
+
+1. **Get API Key**: Visit [Context7](https://context7.com) for API access
+2. **Set Environment Variable**:
+   ```bash
+   export CONTEXT7_API_KEY=your_api_key_here
+   ```
+
 ### MCP Servers
 
-The plugin uses six MCP servers:
+The plugin uses seven MCP servers:
 
 1. **Filesystem** - Local file access (no config needed)
 2. **Tavily Search** - AI-powered web search (requires API key above)
@@ -89,6 +98,7 @@ The plugin uses six MCP servers:
 4. **HuggingFace** - Model and dataset search (OAuth authentication)
 5. **Fetch** - Web content fetching (requires `uv` installed)
 6. **Git** - Git version control operations (requires `uv` installed)
+7. **Context7** - Real-time code documentation retrieval (requires API key)
 
 To verify MCP servers work:
 
@@ -246,6 +256,47 @@ The `academic-research` skill should activate automatically.
    /track-experiment report EXP-2024-001 \
      --format markdown
    ```
+
+### Presentation Creation Workflow
+
+**Goal**: Create a presentation for a conference talk or thesis defense
+
+**Steps**:
+
+1. **Generate outline**:
+   ```bash
+   /slides outline "Deep Learning for Climate Modeling" --type academic --slides 15
+   ```
+
+2. **Create Slidev presentation**:
+   ```bash
+   /slides new climate-talk.md --format slidev --template academic
+   ```
+
+3. **Or request help from agent**:
+   ```
+   Help me create a thesis defense presentation using presentation-creator
+   ```
+
+4. **The presentation-creator agent will**:
+   - Structure slides for academic audience
+   - Add appropriate layouts (cover, two-cols, etc.)
+   - Include placeholders for figures and equations
+   - Add speaker notes
+
+5. **Export to PDF**:
+   ```bash
+   /slides export climate-talk.md --to pdf
+   ```
+
+6. **Or export to PowerPoint**:
+   ```bash
+   /slides export climate-talk.md --to pptx
+   ```
+
+**Tools available**:
+- **Slidev**: Markdown-based, great for code demos, LaTeX equations, Mermaid diagrams
+- **python-pptx**: Programmatic PPTX generation, ideal for data-driven reports
 
 ## Understanding Plugin Components
 

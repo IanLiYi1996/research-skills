@@ -17,6 +17,7 @@ Custom slash commands for common research tasks:
 - **`/huggingface`** - Search HuggingFace Hub for models and datasets
 - **`/fetch`** - Fetch and retrieve content from web URLs
 - **`/git`** - Git version control for research projects
+- **`/slides`** - Create and export presentations (Slidev and python-pptx)
 
 ### 🤖 Agents
 
@@ -27,6 +28,7 @@ Specialized AI agents for research workflows:
 - **`experiment-manager`** - Experiment tracking and reproducibility specialist
 - **`writing-assistant`** - Academic writing and manuscript preparation expert
 - **`latex-expert`** - LaTeX typesetting and journal paper formatting specialist
+- **`presentation-creator`** - Presentation design specialist for slides and talks
 
 ### 🎓 Skills
 
@@ -41,6 +43,9 @@ Advanced capabilities with bundled resources:
 - **`huggingface`** - HuggingFace Hub model and dataset search
 - **`web-fetch`** - Web content fetching and resource retrieval
 - **`git-research`** - Git version control for research reproducibility
+- **`context7-docs`** - Real-time code documentation retrieval
+- **`slidev-presentation`** - Markdown-based presentations with Slidev
+- **`pptx-generation`** - Programmatic PowerPoint generation with python-pptx
 
 ### ⚡ Automation (Hooks)
 
@@ -64,6 +69,7 @@ Event-driven automation for research workflows:
 
 # Set environment variables (required)
 export TAVILY_API_KEY=<your-api-key>          # For web search (Tavily)
+export CONTEXT7_API_KEY=<your-api-key>        # For code documentation (Context7)
 
 # HuggingFace uses OAuth authentication - follow the browser prompt on first use
 
@@ -93,6 +99,7 @@ export RESEARCH_GIT_PATH=.                    # Git repository path, default: cu
 /huggingface search-models --task text-generation --limit 10
 /fetch https://arxiv.org/abs/2301.07041
 /git status
+/slides new presentation.md --format slidev --topic "My Research"
 ```
 
 ### Using Agents
@@ -101,6 +108,7 @@ export RESEARCH_GIT_PATH=.                    # Git repository path, default: cu
 Help me conduct a systematic literature review
 Use data-analyst to compare treatment groups
 Launch experiment-manager to set up my experiment
+Create a presentation for my thesis defense using presentation-creator
 ```
 
 ### Using Skills
@@ -119,6 +127,12 @@ Skills trigger automatically based on keywords:
 
 "Find a good model for sentiment analysis on HuggingFace"
 [Triggers huggingface skill]
+
+"Create slides for my conference presentation"
+[Triggers slidev-presentation skill]
+
+"use context7 - How do I use React hooks?"
+[Triggers context7-docs skill]
 ```
 
 ## Documentation

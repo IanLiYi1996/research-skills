@@ -42,7 +42,10 @@
         "./skills/latex-writing",
         "./skills/huggingface",
         "./skills/web-fetch",
-        "./skills/git-research"
+        "./skills/git-research",
+        "./skills/context7-docs",
+        "./skills/slidev-presentation",
+        "./skills/pptx-generation"
       ],
       "mcpServers": {
         "fs": {
@@ -95,6 +98,17 @@
             "--repository",
             "${RESEARCH_GIT_PATH:-.}"
           ]
+        },
+        "context7": {
+          "type": "stdio",
+          "command": "npx",
+          "args": [
+            "-y",
+            "@upstash/context7-mcp"
+          ],
+          "env": {
+            "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+          }
         }
       }
     }

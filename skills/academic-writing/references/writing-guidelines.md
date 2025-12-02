@@ -137,61 +137,337 @@ Comprehensive guidelines for writing research papers, based on best practices fr
 
 ### Related Work
 
-Organization options:
-- **Chronological**: Evolution of the field
-- **Thematic**: By topic/approach
-- **Problem-based**: By challenge addressed
+The Related Work section establishes your scholarly context and differentiates your contribution.
 
-Tips:
-- Show you know the field
-- Position your work relative to others
-- Be fair to prior work
-- Highlight what's different about your approach
-- Avoid extensive summaries; focus on relevance
+#### Purpose and Goals
+
+1. **Demonstrate expertise**: Show you understand the field deeply
+2. **Position your work**: Clarify how your approach differs
+3. **Acknowledge foundations**: Credit work you build upon
+4. **Identify gaps**: Highlight what existing work doesn't address
+
+#### Organization Strategies
+
+| Strategy | Best For | Structure |
+|----------|----------|-----------|
+| **Chronological** | Showing field evolution | Early work → Recent advances → Your work |
+| **Thematic** | Multiple related topics | Group by theme, then compare |
+| **Problem-based** | Technical papers | Group by challenge addressed |
+| **Methodological** | ML/AI papers | Group by approach type |
+
+#### Critical Analysis Framework
+
+For each related work, consider:
+
+1. **What they did**: Brief objective summary (1-2 sentences)
+2. **How it relates**: Connection to your problem
+3. **Limitation or gap**: What they don't address (that you do)
+
+**Example:**
+
+```text
+# Weak (just summarizing)
+Smith et al. (2022) propose a transformer model for text classification.
+
+# Strong (critical positioning)
+Smith et al. (2022) demonstrate transformers excel at text classification.
+However, their approach requires large labeled data, limiting applicability
+to low-resource settings. Our method addresses this through...
+```
+
+#### Positioning Phrases
+
+- "In contrast to [X], our approach..."
+- "While [X] focuses on..., we address..."
+- "Building on [X], we extend this to..."
+- "Unlike previous methods that..., we propose..."
+- "Our work differs from [X] in three key aspects:..."
+
+#### Common Mistakes
+
+| Mistake | Problem | Solution |
+|---------|---------|----------|
+| **Laundry list** | Lists without connection | Group thematically, explain relationships |
+| **Too brief** | Seems unknowledgeable | Add depth for key papers |
+| **Too comprehensive** | Wastes space | Focus on 15-25 most relevant papers |
+| **Missing recent work** | Appears outdated | Check last 6 months arXiv/venues |
+| **Only praising** | Doesn't justify contribution | Add critical analysis |
+| **Only criticizing** | Appears arrogant | Acknowledge contributions first |
+
+#### Depth vs Breadth
+
+| Paper Type | Recommended |
+|------------|-------------|
+| Conference paper | 15-25 papers, 3-5 in depth |
+| Workshop paper | 8-12 key papers |
+| Journal paper | 30-50+ papers |
+
+---
 
 ### Methods
 
-Structure:
-1. **Overview**: High-level description
-2. **Problem formulation**: Formal definitions
-3. **Approach details**: Step-by-step methodology
-4. **Implementation**: Technical details
+The Methods section is the technical heart of your paper. It must be clear enough for understanding and detailed enough for reproduction.
 
-Tips:
-- Use notation consistently
-- Define terms before using them
-- Include enough detail for reproducibility
-- Use figures to illustrate architecture
-- Separate core method from implementation details
+#### Standard Structure
+
+```text
+3. Method
+   3.1 Problem Formulation
+   3.2 Overview / Framework (with figure)
+   3.3 Component Details
+       3.3.1 First component
+       3.3.2 Second component
+   3.4 Training / Optimization
+```
+
+#### Problem Formulation
+
+**Define before use:**
+
+```text
+# Good
+Let X = {x_1, ..., x_n} denote the input sequence where x_i ∈ R^d.
+Given X, our goal is to predict y ∈ {1, ..., K}.
+
+# Bad - undefined symbols
+We compute f(X) to get the output y using our model M.
+```
+
+#### When to Use Algorithm Pseudocode
+
+| Use Pseudocode | Don't Use |
+|----------------|-----------|
+| Complex multi-step procedures | Standard operations (SGD) |
+| Novel algorithms | Simple 2-3 sentence procedures |
+| When math would be unclear | Duplicates text exactly |
+
+**Pseudocode best practices:**
+- Number lines if referenced in text
+- Use meaningful variable names
+- Include input/output specifications
+- Keep appropriate abstraction level
+
+#### Mathematical Notation
+
+| Type | Convention | Example |
+|------|------------|---------|
+| Scalars | Lowercase italic | x, y, α |
+| Vectors | Lowercase bold | **x**, **h** |
+| Matrices | Uppercase bold | **W**, **A** |
+| Sets | Calligraphic | 𝒟, 𝒳 |
+| Functions | Roman | softmax, ReLU |
+
+#### Core Method vs Implementation Details
+
+| In Main Paper | In Appendix |
+|---------------|-------------|
+| Key algorithmic innovations | Hardware specifications |
+| Novel architectural components | Random seeds |
+| Loss functions and objectives | Full hyperparameter tables |
+| Essential hyperparameters | Training curves |
+
+**Rule:** If changing it wouldn't change your scientific contribution, it's an implementation detail.
+
+#### Reproducibility Checklist
+
+- [ ] Model architecture fully specified
+- [ ] Hyperparameters listed (or in appendix)
+- [ ] Training procedure described
+- [ ] Data splits specified
+- [ ] Evaluation metrics defined
+- [ ] Baseline implementations explained
+- [ ] Code availability mentioned
+
+#### Method Figure Guidelines
+
+- Show overall architecture/pipeline
+- Use consistent visual language
+- Include legend if needed
+- Reference in text: "As shown in Figure 2..."
+
+---
 
 ### Experiments
 
-Structure:
-1. **Setup**: Datasets, baselines, metrics, implementation
-2. **Main results**: Primary comparison tables
-3. **Analysis**: Ablations, case studies, visualizations
-4. **Discussion**: Interpretation of results
+The Experiments section validates your claims with empirical evidence.
 
-Tips:
-- Clearly state experimental setup
-- Use consistent formatting for tables
-- Include error bars/significance tests where applicable
-- Explain surprising results
-- Be honest about limitations
+#### Standard Structure
+
+```text
+4. Experiments
+   4.1 Experimental Setup (datasets, baselines, metrics)
+   4.2 Main Results (primary comparison)
+   4.3 Analysis (ablations, case studies)
+   4.4 Discussion (optional)
+```
+
+#### Experiment Design Principles
+
+**Every experiment should answer a question:**
+
+| Question | Experiment Design |
+|----------|-------------------|
+| "Does it work?" | Main comparison vs baselines |
+| "Why does it work?" | Ablation studies |
+| "When does it work?" | Breakdown by category |
+| "How robust is it?" | Sensitivity analysis |
+| "What does it learn?" | Qualitative analysis |
+
+#### Dataset Description Template
+
+```text
+[Dataset] (Citation): [Brief description]. Contains [size] examples
+for [task]. We use the standard train/dev/test split of [X/Y/Z].
+```
+
+#### Baseline Selection
+
+| Type | Purpose | Example |
+|------|---------|---------|
+| **Classic** | Historical context | SVM, Logistic Regression |
+| **Strong recent** | Current SOTA | BERT, GPT |
+| **Ablated versions** | Validate components | Your method - component X |
+| **Upper bound** | Show ceiling | Human performance |
+
+**Avoid:** Only weak baselines, unfair comparisons, missing obvious competitors
+
+#### Ablation Study Design
+
+- Remove ONE component at a time
+- Include base model (all components removed)
+- Order by impact (largest drop first)
+- Discuss which components matter most
+
+**Example table:**
+
+| Model | Accuracy | F1 |
+|-------|----------|-----|
+| Full model | 89.3 | 88.1 |
+| w/o attention | 86.1 | 84.9 |
+| w/o pre-training | 84.5 | 83.2 |
+| Base only | 82.3 | 81.0 |
+
+#### Statistical Significance
+
+**Always include uncertainty:**
+
+```text
+# Bad
+Our method achieves 89.3% accuracy.
+
+# Good
+Our method achieves 89.3 ± 0.4% accuracy (mean ± std over 5 runs).
+```
+
+**When to report significance:**
+- Small improvements (<2%): Required
+- Close results: Report p-values
+- "Significant improvement" claims: Must be validated
+
+**Common approaches:**
+- Standard deviation over 3-5 runs
+- Bootstrap confidence intervals
+- Paired t-test or Wilcoxon test
+- McNemar's test for classification
+
+#### Handling Negative Results
+
+```text
+# Good (constructive)
+While our method shows lower accuracy on small datasets (<1K examples),
+it provides substantial gains on larger datasets where its advantages
+are realized.
+
+# Bad (dismissive)
+Our method doesn't work on Dataset-C.
+```
+
+**Remember:** Reviewers respect honesty more than cherry-picked results.
+
+#### Common Mistakes
+
+| Mistake | Problem | Solution |
+|---------|---------|----------|
+| **Weak baselines only** | Inflated improvements | Add current SOTA |
+| **No error bars** | Results may be noise | Report std over multiple runs |
+| **Unfair comparison** | Misleading claims | Same data, preprocessing, tuning |
+| **Missing ablations** | Can't assess components | Ablate each novel component |
+| **No analysis** | Just tables, no insight | Explain why results make sense |
+| **Cherry-picked** | Reviewer distrust | Report all metrics |
+
+---
 
 ### Conclusion
 
-Structure:
-1. **Summary**: What you did and found
-2. **Significance**: Why it matters
-3. **Limitations**: Honest assessment
-4. **Future work**: What comes next
+The Conclusion wraps up your paper and leaves a lasting impression.
 
-Tips:
-- Don't introduce new information
-- Don't repeat the abstract verbatim
-- Be concise (half to one page)
-- End on a forward-looking note
+#### Structure
+
+```text
+6. Conclusion
+   [Summary - what you did] (2-3 sentences)
+   [Key findings] (2-3 sentences)
+   [Significance] (1-2 sentences)
+   [Limitations] (1-2 sentences)
+   [Future work] (2-3 sentences)
+```
+
+#### Connecting Back to Motivation
+
+**Link results to opening claims:**
+
+```text
+# Introduction claimed:
+"Current methods struggle with long sequences due to O(n²) complexity."
+
+# Conclusion connects back:
+"We have presented EfficientAttn, which reduces attention complexity
+from O(n²) to O(n log n). Experiments confirm this enables processing
+sequences 10x longer while maintaining competitive accuracy."
+```
+
+#### Framing Limitations Constructively
+
+| Limitation | Constructive Frame |
+|------------|-------------------|
+| Computational cost | "Trade-off between accuracy and efficiency" |
+| Limited datasets | "Validated on standard benchmarks; broader evaluation is future work" |
+| Specific domain | "Focused on [domain]; generalization is promising direction" |
+| Requires labeled data | "Semi-supervised extensions could reduce this requirement" |
+
+**Example:**
+
+```text
+# Bad
+Our method fails on small datasets and is computationally expensive.
+
+# Good
+While our method achieves strong results on large-scale datasets,
+its performance on smaller datasets (<10K examples) suggests that
+the approach benefits most from abundant training data. Future work
+could explore few-shot adaptations to extend applicability.
+```
+
+#### Future Work Types
+
+1. **Extensions**: Natural next steps
+2. **Applications**: New domains
+3. **Improvements**: Addressing limitations
+4. **Open questions**: Research directions
+
+**Tip:** Be specific but don't give away your next paper!
+
+#### What NOT to Include
+
+| Don't Include | Why | Where It Belongs |
+|---------------|-----|------------------|
+| New results | Unexpected | Results section |
+| New methods | Confusing | Methods section |
+| Excessive detail | Verbose | Main paper |
+| Apologies | Undermines confidence | Frame as future work |
+| Hype | Reviewer distrust | Be measured |
+
+**Length:** Half to one column (conference), half to one page (journal)
 
 ---
 

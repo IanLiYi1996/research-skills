@@ -9,8 +9,24 @@ This skill provides comprehensive support for academic writing and manuscript pr
 
 ## Core Capabilities
 
+### Reviewer's Perspective (Self-Check)
+
+Always write from a reviewer's perspective:
+
+1. **10-minute test**: Can key points be grasped quickly?
+2. **Logic chain**: Does motivation → contribution logic hold?
+3. **3-sentence test**: Can main contribution be explained briefly?
+4. **Experiment validation**: Do experiments support the motivation?
+5. **Consistency**: Is the logic consistent throughout all sections?
+
+### Presentation Hierarchy
+
+**图 > 表 > Algorithm > 公式 > 文字** (Figure > Table > Algorithm > Equation > Text)
+
 ### 1. Manuscript Structure
+
 Guide proper organization of research papers:
+
 - **IMRAD format**: Introduction, Methods, Results, And Discussion
 - **Title and Abstract**: Concise, informative summaries
 - **Introduction**: Background, gap, objectives

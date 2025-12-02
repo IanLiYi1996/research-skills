@@ -2,11 +2,78 @@
 
 Comprehensive guidelines for writing research papers, based on best practices from top conferences.
 
+---
+
+## Reviewer's Perspective (Self-Check)
+
+**Write papers from a reviewer's perspective.** Before submission, ask yourself:
+
+### 5 Key Questions
+
+1. **Can the key points be grasped in 10 minutes?**
+   - Is the logic clear and easy to follow?
+   - Can a busy reviewer quickly understand your contribution?
+
+2. **Does the logic from motivation to contribution hold?**
+   - Is there a clear causal chain?
+   - Does the problem naturally lead to your solution?
+
+3. **Can the main contribution be explained in 3 sentences?**
+   - What is the core novelty?
+   - Why does it matter?
+
+4. **Do experiments validate the motivation?**
+   - Does each experiment serve a purpose?
+   - Are claims backed by evidence?
+
+5. **Is Abstract → Introduction → Method → Experiments logically consistent?**
+   - No contradictions between sections
+   - Story flows naturally throughout
+
+---
+
+## Writing Principles
+
+### Presentation Hierarchy
+
+**图 > 表 > Algorithm > 公式 > 文字**
+
+(Figure > Table > Algorithm > Equation > Text)
+
+- A picture is worth a thousand words
+- Use the most intuitive representation
+- Figures communicate faster than text
+
+### Key Techniques
+
+1. **Experiments should be substantial** - Often ~50% of paper length
+2. **Figures and captions should be self-contained** - Understandable without reading main text
+3. **Language should be clear and simple** - Prioritize clarity over complexity
+4. **Use concrete examples** - In introduction and case studies, examples are crucial
+5. **Make the story compelling** - Logical flow from problem to solution
+
+---
+
 ## Paper Structure (IMRAD)
 
 ### Abstract (150-250 words)
 
-Structure:
+**Core Components:**
+
+1. **Problem & Motivation** (1-2 sentences)
+   - What problem exists in prior work?
+   - Tell a compelling story
+
+2. **Proposed Solution** (1-2 sentences)
+   - What do you propose?
+   - Why does it work? (brief intuition)
+
+3. **Key Results** (1-2 sentences)
+   - Specific numbers and improvements
+   - Main experimental findings
+
+**Alternative Structure:**
+
 1. **Background** (1-2 sentences): Context and importance
 2. **Problem/Gap** (1 sentence): What's missing
 3. **Objective** (1 sentence): What you do
@@ -14,15 +81,44 @@ Structure:
 5. **Results** (2-3 sentences): Key findings with numbers
 6. **Conclusion** (1-2 sentences): Significance and implications
 
-Tips:
+**Tips:**
+
 - Write last, after completing the paper
 - Include specific numbers for key results
 - Avoid undefined acronyms
 - Make it self-contained
+- Should answer: What? Why? How? Results?
 
 ### Introduction
 
-Structure (Funnel approach):
+**Detailed Structure:**
+
+1. **Research Value** (1 paragraph)
+   - Why is this problem important?
+   - What is the significance of this research area?
+
+2. **Prior Work & Limitations** (1-2 paragraphs)
+   - What are the mainstream approaches?
+   - Acknowledge their contributions
+   - Point out existing problems/limitations
+
+3. **Motivation & Insight** (1 paragraph)
+   - Where does your inspiration come from?
+   - What key observation or insight drives your approach?
+   - **Use concrete examples** - Illustrative examples are crucial here
+
+4. **Proposed Method** (1-2 paragraphs)
+   - Coarse-grained description first
+   - Then fine-grained explanation
+   - Why does your approach address the limitations?
+
+5. **Contributions** (bullet points)
+   - List 3-5 specific contributions
+   - Be concrete and measurable
+   - Most common format in top venues
+
+**Alternative Funnel Structure:**
+
 1. **Broad context**: Why this area matters
 2. **Current state**: What's been done
 3. **Gap/Problem**: What's missing or wrong
@@ -30,11 +126,14 @@ Structure (Funnel approach):
 5. **Contributions list**: 3-5 bullet points
 6. **Paper organization** (optional): Brief roadmap
 
-Tips:
+**Tips:**
+
 - Start broad, narrow to specific
 - End with clear contributions
 - Don't oversell or undersell
 - Keep it concise (1-2 pages typically)
+- **Concrete examples in introduction are very important**
+- Ensure motivation → method → contribution logic is airtight
 
 ### Related Work
 

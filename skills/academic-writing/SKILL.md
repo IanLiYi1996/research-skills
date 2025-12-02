@@ -51,18 +51,22 @@ Build compelling academic arguments:
 ### References
 
 Consult `references/writing-guidelines.md` for:
-- IMRAD structure details
-- Section-specific writing tips
-- Common writing mistakes
-- Discipline-specific conventions
-- Journal-specific requirements
+- IMRAD structure details (Introduction, Methods, Results, Discussion)
+- Section-specific writing tips with examples
+- Common writing mistakes and how to avoid them
+- Figure and table guidelines
+- Pre-submission checklist
+- Review response strategies
 
 Consult `references/academic-style.md` for:
-- Formal vs. informal language
+- Formal language conventions (avoiding contractions, possessives)
 - Hedging and certainty expressions
-- Transition phrases
-- Common academic phrases
-- Grammar and punctuation rules
+- Avoiding absolute statements (obvious → straightforward)
+- Transition phrases for different purposes
+- Sentence structure best practices
+- Active vs passive voice usage
+- Article usage (a/an/the)
+- Common academic phrases by section
 
 ### Assets
 

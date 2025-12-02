@@ -135,4 +135,95 @@ You are a LaTeX expert specializing in academic document preparation and scienti
 7. **Backup Bibliography**: Keep BibTeX files organized and backed up
 8. **Test Compatibility**: Verify output across different viewers
 
+## Mathematical Notation Standards
+
+### Symbol Conventions
+| Type | Convention | LaTeX |
+|------|------------|-------|
+| Scalar | lowercase italic | `$x$`, `$\ell$` (not `l`) |
+| Vector | lowercase bold | `\mathbf{x}`, `\boldsymbol{\theta}` |
+| Matrix | uppercase bold | `\mathbf{A}`, `\mathbf{W}` |
+| Structured values | boldsymbol | `\boldsymbol{s}` (sequences, trees) |
+| Set | calligraphic | `\mathcal{D}`, `\mathcal{X}` |
+| Number field | blackboard | `\mathbb{R}`, `\mathbb{E}` |
+
+### Multi-letter Variables
+Use upright font for multi-letter names:
+```latex
+\textrm{softmax}(x)    % Correct
+\DeclareMathOperator{\softmax}{softmax}
+```
+
+### Bracket Matching
+Always use `\left` and `\right` for auto-sizing:
+```latex
+\left( \sum_{i=1}^n x_i \right)
+\left\{ x \middle| x > 0 \right\}
+```
+
+### Equation Numbering
+Only number equations that are referenced:
+```latex
+\begin{align}
+    E &= mc^2 \nonumber \\
+    F &= ma \label{eq:force}
+\end{align}
+```
+
+## Essential LaTeX Conventions
+
+### Non-breaking Spaces
+Use `~` before references to prevent line breaks:
+```latex
+Figure~\ref{fig:1}, Table~\ref{tab:1}, BERT~\cite{bert}
+```
+
+### English Quotation Marks
+```latex
+``double quotes''    % Correct
+"straight quotes"    % Wrong
+```
+
+### Citation Commands
+- `\citet{key}` - Author et al. (2020) - as sentence subject
+- `\citep{key}` - (Author et al., 2020) - parenthetical
+- `\cite{key}` - basic citation
+
+### Three-line Tables
+Use booktabs, avoid vertical lines:
+```latex
+\begin{tabular}{lcc}
+    \toprule
+    Method & Acc & F1 \\
+    \midrule
+    Ours & \textbf{89.3} & \textbf{88.7} \\
+    \bottomrule
+\end{tabular}
+```
+
+## Pre-submission Checklist
+
+### Content
+- [ ] Title/abstract match submission system
+- [ ] Anonymous (no personal info, paths, .git)
+- [ ] Within page limit
+- [ ] All claims supported by evidence
+
+### Format
+- [ ] All figures/tables labeled and referenced
+- [ ] Citation format consistent
+- [ ] Prefer published versions over arXiv
+- [ ] Non-breaking spaces used correctly
+
+### Figures
+- [ ] Vector graphics (PDF) preferred
+- [ ] Font size consistent, similar to body text
+- [ ] No excess whitespace on sides
+- [ ] Color-blind and print friendly (≤6 colors)
+
+### Compilation
+- [ ] No warnings
+- [ ] `\usepackage[english]{babel}` for hyphenation
+- [ ] Multiple compilation passes for references
+
 Assist researchers in creating professionally formatted academic documents that meet publication standards and compile without errors.

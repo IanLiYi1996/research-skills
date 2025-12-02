@@ -2,6 +2,39 @@
 
 Quick reference for common LaTeX commands and patterns.
 
+## Mathematical Notation Standards
+
+### Symbol Conventions
+
+| Type | Convention | Example |
+|------|------------|---------|
+| Scalar | lowercase italic | $x$, $y$, `\ell` (not `l`) |
+| Vector | lowercase bold | `\mathbf{x}`, `\boldsymbol{\theta}` |
+| Matrix | uppercase bold | `\mathbf{A}`, `\mathbf{W}` |
+| Set | calligraphic | `\mathcal{D}`, `\mathcal{X}` |
+| Number field | blackboard | `\mathbb{R}`, `\mathbb{E}`, `\mathbb{N}` |
+
+### Multi-letter Operators
+
+```latex
+% Use upright font for multi-letter names
+\textrm{softmax}(x)
+\textrm{ReLU}(x)
+
+% Or define custom operators
+\DeclareMathOperator{\softmax}{softmax}
+```
+
+### Bracket Matching
+
+```latex
+% Auto-sized brackets
+\left( \sum_{i=1}^n x_i \right)
+\left\{ x \middle| x > 0 \right\}
+```
+
+---
+
 ## Document Structure
 
 ```latex
@@ -349,6 +382,61 @@ pdflatex document.tex
 latexmk -pdf document.tex
 ```
 
+## Non-breaking Spaces (~)
+
+Use `~` to prevent unwanted line breaks:
+
+```latex
+Figure~\ref{fig:model}
+Table~\ref{tab:results}
+Section~\ref{sec:intro}
+Equation~\eqref{eq:loss}
+BERT~\cite{bert}
+```
+
+## English Quotation Marks
+
+```latex
+% Correct - use backticks and apostrophes
+``double quotes''
+`single quotes'
+
+% Wrong - don't use straight quotes
+"straight quotes"
+```
+
+## Citation Commands (natbib)
+
+| Command | Usage | Output |
+|---------|-------|--------|
+| `\cite{key}` | Basic | [1] or (Author, 2020) |
+| `\citet{key}` | In-text (subject) | Author et al. (2020) |
+| `\citep{key}` | Parenthetical | (Author et al., 2020) |
+
+```latex
+% As sentence subject - use \citet
+\citet{bert} propose a pre-trained model.
+
+% Not as subject - use \citep
+Pre-trained models show great success~\citep{bert}.
+```
+
+## Three-line Table (Booktabs)
+
+```latex
+% No vertical lines! Only horizontal rules.
+\begin{tabular}{lcc}
+    \toprule
+    Method & Accuracy & F1 \\
+    \midrule
+    Baseline & 85.2 & 84.1 \\
+    Ours & \textbf{89.3} & \textbf{88.7} \\
+    \bottomrule
+\end{tabular}
+```
+
+---
+
 ## Useful Tips
 
 1. **Compile often** to catch errors early
@@ -358,3 +446,16 @@ latexmk -pdf document.tex
 5. **Use booktabs** for professional tables
 6. **Use cleveref** for smart cross-references
 7. **Keep backups** of your `.tex` and `.bib` files
+8. **Avoid contractions** in formal writing (don't → do not)
+9. **Use `\ell`** instead of `l` to avoid confusion with `1`
+10. **Number only referenced equations** using `\nonumber`
+
+## Pre-submission Checklist
+
+- [ ] Anonymous (no personal/institution info)
+- [ ] Within page limit
+- [ ] All figures/tables have labels and references
+- [ ] Citations format is consistent
+- [ ] No compilation warnings
+- [ ] Vector graphics used for figures
+- [ ] Non-breaking spaces before references

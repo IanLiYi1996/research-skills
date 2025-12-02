@@ -68,10 +68,21 @@ ACM publication format.
 ### References
 
 Consult `references/latex-cheatsheet.md` for:
-- Common LaTeX commands
-- Mathematical symbols
-- Package recommendations
-- Troubleshooting tips
+- Mathematical notation standards (scalar, vector, matrix conventions)
+- Common LaTeX commands and symbols
+- Non-breaking spaces and quotation marks
+- Citation commands (cite, citep, citet)
+- Three-line tables with booktabs
+- Pre-submission checklist
+
+Consult `references/paper-writing-tips.md` for:
+- Comprehensive mathematical symbol conventions
+- Formula best practices (brackets, alignment, numbering)
+- Table and figure design guidelines
+- Writing style rules (avoiding contractions, absolute statements)
+- Latin expressions usage (e.g., i.e., et al.)
+- Pre-submission checklist (detailed)
+- External tools and resources
 
 ## Workflow Patterns
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #0F172A; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #0F172A; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #1E293B; padding: 15pt 30pt; border-bottom: 3pt solid #3B82F6;
+}
+h1 { color: #FFFFFF; font-size: 26pt; margin: 0; font-weight: bold; }
+.main { display: flex; flex: 1; padding: 15pt 25pt 40pt 25pt; gap: 20pt; }
+.card {
+  flex: 1; background: #1E293B; border-radius: 10pt; padding: 15pt;
+}
+.card-standard { border-top: 4pt solid #3B82F6; }
+.card-speciale { border-top: 4pt solid #8B5CF6; }
+h2 { color: #FFFFFF; font-size: 14pt; margin: 0 0 3pt 0; font-weight: bold; }
+.subtitle { color: #94A3B8; font-size: 10pt; margin: 0 0 10pt 0; }
+.feature { color: #CBD5E1; font-size: 10pt; margin: 0 0 5pt 0; }
+.yes { color: #22C55E; }
+.no { color: #EF4444; }
+.performance {
+  background: #0F172A; border-radius: 6pt; padding: 10pt; margin-top: 10pt;
+}
+.perf-label { color: #94A3B8; font-size: 9pt; margin: 0 0 3pt 0; }
+.perf-value { color: #3B82F6; font-size: 12pt; margin: 0; font-weight: bold; }
+.perf-purple { color: #8B5CF6; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>模型变体对比</h1>
+</div>
+<div class="main">
+  <div class="card card-standard">
+    <h2>DeepSeek-V3.2</h2>
+    <p class="subtitle">标准版 - 全能型</p>
+    <p class="feature"><span class="yes">+</span> 工具调用 (Tool Calling)</p>
+    <p class="feature"><span class="yes">+</span> Thinking with Tools</p>
+    <p class="feature"><span class="yes">+</span> 深度推理能力</p>
+    <p class="feature"><span class="yes">+</span> 多轮对话</p>
+    <p class="feature"><span class="yes">+</span> 代码生成</p>
+    <div class="performance">
+      <p class="perf-label">性能水平</p>
+      <p class="perf-value">= GPT-5</p>
+    </div>
+  </div>
+  <div class="card card-speciale">
+    <h2>DeepSeek-V3.2-Speciale</h2>
+    <p class="subtitle">特别版 - 深度推理专精</p>
+    <p class="feature"><span class="no">x</span> 工具调用 (不支持)</p>
+    <p class="feature"><span class="no">x</span> Thinking with Tools (不支持)</p>
+    <p class="feature"><span class="yes">+</span> 极致深度推理</p>
+    <p class="feature"><span class="yes">+</span> 数学/逻辑问题</p>
+    <p class="feature"><span class="yes">+</span> 竞赛级编程</p>
+    <div class="performance">
+      <p class="perf-label">性能水平</p>
+      <p class="perf-value perf-purple">> GPT-5</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

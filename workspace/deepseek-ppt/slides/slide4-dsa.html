@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #0F172A; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background: #0F172A; font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+}
+.header {
+  background: #1E293B; padding: 15pt 30pt; border-bottom: 3pt solid #3B82F6;
+  display: flex; align-items: center; gap: 12pt;
+}
+.badge {
+  background: #3B82F6; border-radius: 6pt; padding: 5pt 10pt;
+}
+.badge-text { color: #FFFFFF; font-size: 12pt; font-weight: bold; margin: 0; }
+h1 { color: #FFFFFF; font-size: 22pt; margin: 0; font-weight: bold; }
+.main { display: flex; flex: 1; padding: 15pt 30pt 40pt 30pt; gap: 20pt; }
+.left { flex: 1.2; }
+.right { flex: 0.8; display: flex; flex-direction: column; gap: 10pt; }
+h2 { color: #3B82F6; font-size: 14pt; margin: 0 0 8pt 0; }
+p { color: #CBD5E1; font-size: 11pt; margin: 0 0 10pt 0; line-height: 1.5; }
+ul { margin: 0; padding-left: 16pt; }
+li { color: #CBD5E1; font-size: 11pt; margin-bottom: 8pt; line-height: 1.4; }
+.feature-box {
+  background: #1E293B; border-radius: 6pt; padding: 12pt;
+  border-left: 4pt solid #3B82F6;
+}
+.feature-title { color: #FFFFFF; font-size: 11pt; margin: 0 0 4pt 0; font-weight: bold; }
+.feature-desc { color: #94A3B8; font-size: 10pt; margin: 0; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="badge"><p class="badge-text">01</p></div>
+  <h1>DeepSeek Sparse Attention (DSA)</h1>
+</div>
+<div class="main">
+  <div class="left">
+    <h2>技术原理</h2>
+    <p>DSA 是一种创新的稀疏注意力机制，通过智能选择性计算，在保持模型质量的同时显著降低计算开销。</p>
+    <h2>核心优势</h2>
+    <ul>
+      <li><b>计算效率提升</b>：大幅减少注意力计算的复杂度</li>
+      <li><b>长上下文优化</b>：专门针对长序列场景设计</li>
+      <li><b>性能无损</b>：保持与稠密注意力相当的模型质量</li>
+      <li><b>内存友好</b>：降低显存占用，支持更大批次</li>
+    </ul>
+  </div>
+  <div class="right">
+    <div class="feature-box">
+      <p class="feature-title">选择性计算</p>
+      <p class="feature-desc">智能识别关键 token 关系</p>
+    </div>
+    <div class="feature-box">
+      <p class="feature-title">动态稀疏模式</p>
+      <p class="feature-desc">自适应调整注意力分布</p>
+    </div>
+    <div class="feature-box">
+      <p class="feature-title">硬件优化</p>
+      <p class="feature-desc">针对现代 GPU 架构深度优化</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

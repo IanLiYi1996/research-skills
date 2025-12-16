@@ -70,3 +70,5 @@ build/
 *.docx~
 .Rhistory
 Paper-Writing-Tips/
+reference/
+workspace/sharing/

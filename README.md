@@ -18,6 +18,7 @@ Custom slash commands for common research tasks:
 - **`/fetch`** - Fetch and retrieve content from web URLs
 - **`/git`** - Git version control for research projects
 - **`/slides`** - Create and export presentations (Slidev and python-pptx)
+- **`/references`** - Search DBLP and manage BibTeX bibliographies
 
 ### 🤖 Agents
 
@@ -46,6 +47,7 @@ Advanced capabilities with bundled resources:
 - **`context7-docs`** - Real-time code documentation retrieval
 - **`slidev-presentation`** - Markdown-based presentations with Slidev
 - **`pptx-generation`** - Programmatic PowerPoint generation with python-pptx
+- **`reference-management`** - Bibliography and citation management using DBLP
 
 ### ⚡ Automation (Hooks)
 
@@ -100,6 +102,9 @@ export RESEARCH_GIT_PATH=.                    # Git repository path, default: cu
 /fetch https://arxiv.org/abs/2301.07041
 /git status
 /slides new presentation.md --format slidev --topic "My Research"
+/references search "attention mechanism"
+/references author "Yoshua Bengio"
+/references export references.bib
 ```
 
 ### Using Agents

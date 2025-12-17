@@ -45,7 +45,8 @@
         "./skills/git-research",
         "./skills/context7-docs",
         "./skills/slidev-presentation",
-        "./skills/pptx-generation"
+        "./skills/pptx-generation",
+        "./skills/reference-management"
       ],
       "mcpServers": {
         "fs": {
@@ -109,6 +110,13 @@
           "env": {
             "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
           }
+        },
+        "dblp": {
+          "type": "stdio",
+          "command": "uvx",
+          "args": [
+            "mcp-dblp"
+          ]
         }
       }
     }

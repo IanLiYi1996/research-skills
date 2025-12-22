@@ -1,0 +1,4 @@
+google-generativeai>=0.3.0
+python-pptx>=0.6.21
+Pillow>=10.0.0
+PyPDF2>=3.0.0

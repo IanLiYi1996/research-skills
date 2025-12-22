@@ -66,28 +66,27 @@ Build compelling academic arguments:
 
 ### References
 
-Consult `references/writing-guidelines.md` for:
-- IMRAD structure details (Introduction, Methods, Results, Discussion)
-- Section-specific writing tips with examples
-- Common writing mistakes and how to avoid them
-- Figure and table guidelines
-- Pre-submission checklist
-- Review response strategies
+Consult `references/writing-guidelines.md` for comprehensive section overviews.
 
-Consult `references/academic-style.md` for:
-- Formal language conventions (avoiding contractions, possessives)
-- Hedging and certainty expressions
-- Avoiding absolute statements (obvious → straightforward)
-- Transition phrases for different purposes
-- Sentence structure best practices
-- Active vs passive voice usage
-- Article usage (a/an/the)
-- Common academic phrases by section
+**Detailed Section-Specific Guides:**
+- `references/introduction-guide.md` - Funnel approach with 60+ common phrases and examples
+- `references/methods-guide.md` - Reproducibility-focused writing with technical guidance
+- `references/results-guide.md` - Objective presentation techniques
+- `references/discussion-guide.md` - 5-step framework with 70+ common phrases
+- `references/academic-style.md` - Language conventions and formal style
 
-### Assets
+### Interactive Checklists
 
-Use `assets/manuscript-template.md` for standard research paper structure.
-Use `assets/abstract-template.md` for structured abstract format.
+Use section-specific checklists during drafting:
+- `assets/introduction-checklist.md` - 35+ checkpoints for Introduction
+- `assets/methods-checklist.md` - 30+ checkpoints for Methods
+- `assets/results-checklist.md` - 30+ checkpoints for Results
+- `assets/discussion-checklist.md` - 49 checkpoints for Discussion
+
+### Templates and Examples
+
+- `assets/manuscript-template.md` - Standard research paper structure
+- `assets/abstract-template.md` - Structured abstract format
 
 ## Workflow Patterns
 
@@ -166,12 +165,15 @@ Use `assets/abstract-template.md` for structured abstract format.
 - Organize logically (by hypothesis or theme)
 
 ### Discussion Section
-- Restate main findings
-- Interpret results in context
-- Compare with previous studies
-- Explain unexpected findings
-- Address study limitations
-- Suggest future research
+
+Use the 5-step framework (see `references/discussion-guide.md`):
+1. Summarize current research findings
+2. Relate results to existing literature
+3. Discuss unexpected findings
+4. Connect to broader theoretical implications
+5. Address study limitations constructively
+
+Each step includes 10-15 common phrases and before/after examples.
 
 ## Integration with Other Tools
 

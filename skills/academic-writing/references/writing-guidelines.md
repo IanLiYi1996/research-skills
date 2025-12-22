@@ -2,6 +2,18 @@
 
 Comprehensive guidelines for writing research papers, based on best practices from top conferences.
 
+## Quick Navigation
+
+**Detailed Section-Specific Guides:**
+- [Introduction Guide](./introduction-guide.md) - Funnel approach with 60+ common phrases
+- [Methods Guide](./methods-guide.md) - Reproducibility-focused technical writing
+- [Results Guide](./results-guide.md) - Objective presentation techniques
+- [Discussion Guide](./discussion-guide.md) - 5-step framework with 70+ common phrases
+
+**Interactive Resources:**
+- [Writing Checklists](../assets/) - Section-by-section checkpoints for drafting
+- [Academic Style Guide](./academic-style.md) - Language conventions and formal style
+
 ---
 
 ## Reviewer's Perspective (Self-Check)
@@ -394,6 +406,110 @@ Our method doesn't work on Dataset-C.
 | **Missing ablations** | Can't assess components | Ablate each novel component |
 | **No analysis** | Just tables, no insight | Explain why results make sense |
 | **Cherry-picked** | Reviewer distrust | Report all metrics |
+
+---
+
+### Discussion
+
+The Discussion interprets your results, connects them to the literature, and addresses their implications. This is where you move from "what we found" (Results) to "what it means" and "why it matters."
+
+**For comprehensive guidance on writing Discussion sections, see [discussion-guide.md](./discussion-guide.md).**
+
+#### Quick 5-Step Framework
+
+Use this proven structure to ensure comprehensive discussion coverage:
+
+1. **Summarize Current Research** - Briefly restate key findings (2-4 sentences) without repeating Results verbatim
+2. **Relate to Literature** - Position findings within existing research, noting agreements and divergences
+3. **Address Unexpected Findings** - Explain surprising results constructively (if applicable)
+4. **Connect to Broader Implications** - Elevate specific findings to theoretical principles and practical applications
+5. **Acknowledge Limitations** - Frame methodological boundaries constructively, connecting to future work
+
+#### Essential Components
+
+**Interpretation in Context**:
+- Explain what findings mean, not just restate them
+- Connect each major result to research questions/hypotheses
+- Use appropriate hedging (suggests, indicates) rather than absolute claims
+
+**Literature Integration**:
+- Compare with 3-5 highly relevant studies
+- Acknowledge consistent findings and explain divergences
+- Show how your work extends or complements prior research
+
+**Implications**:
+- Theoretical: How findings advance understanding of the phenomenon
+- Practical: Real-world applications and impact
+- Methodological: Insights about approaches or techniques (if applicable)
+
+**Constructive Limitation Framing**:
+- 3-5 genuine limitations (methodological boundaries, not minor flaws)
+- Explain potential impact on interpretation
+- Connect each to specific future research directions
+- Maintain confidence in core contributions
+
+#### Common Patterns and Examples
+
+**Strong Opening**:
+```
+Our results demonstrate that [main finding], addressing [research gap].
+This finding has important implications for [theoretical/practical domain].
+```
+
+**Literature Connection**:
+```
+These findings are consistent with [Study A], who reported [similar result].
+However, unlike [Study B], we observe that [key difference], suggesting
+that [theoretical insight].
+```
+
+**Unexpected Finding**:
+```
+Contrary to our hypothesis, we found that [unexpected result]. This
+counter-intuitive pattern may be explained by [plausible mechanism],
+indicating that [revised understanding].
+```
+
+**Limitation Framing**:
+```
+While our approach demonstrates [strength], it is subject to [limitation].
+Future work could address this by [specific solution], which would
+[benefit/extension].
+```
+
+#### Integration Checklist
+
+- [ ] Addresses all research questions from Introduction
+- [ ] Interprets all major Results (nothing left unaddressed)
+- [ ] Integrates 3-5+ relevant citations throughout (not just at beginning)
+- [ ] Balances confidence with appropriate hedging
+- [ ] Discusses both theoretical and practical implications
+- [ ] Frames 3-5 limitations constructively
+- [ ] Suggests specific future directions
+- [ ] Maintains logical flow from findings → context → implications → limits
+
+#### What to Avoid
+
+| Mistake | Why It's Problematic | Solution |
+|---------|---------------------|----------|
+| Repeating Results | Wastes space, adds no value | Synthesize and interpret instead |
+| Ignoring contrary evidence | Appears unaware of field | Address explicitly with explanations |
+| Overclaiming | Triggers reviewer skepticism | Use appropriate hedging language |
+| Excessive self-criticism | Undermines contribution | Balance honesty with confidence |
+| No future directions | Missed opportunity | Suggest 2-3 specific next steps |
+
+#### Resources
+
+**Detailed Guidance**: See [discussion-guide.md](./discussion-guide.md) for:
+- Complete 5-step framework with 70+ common phrases
+- 10+ before/after examples showing strong vs. weak discussion writing
+- Detailed guidance on each step with key considerations
+- Complete annotated template
+- Common mistakes table with solutions
+
+**Interactive Checklist**: Use [discussion-checklist.md](../assets/discussion-checklist.md) while drafting to ensure comprehensive coverage (49 specific checkpoints).
+
+**Additional Examples**: See [paper-examples.md](../assets/paper-examples.md) for more Discussion examples across different scenarios.
 
 ---
 
